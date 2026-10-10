@@ -1,0 +1,8 @@
+PLUGIN_NOMADCOMPANION
+	EN	Nomad Companion
+
+PLUGIN_NOMADCOMPANION_DESC
+	EN	Lets only the phone running Nomad Player control it. Other devices can still see what it's playing.
+
+PLUGIN_NOMADCOMPANION_REFUSED
+	EN	Only the phone running Nomad can control this player.
