@@ -55,6 +55,12 @@ The last three move music without syncing the players, and only Nomad's phone ca
 - **Send** switches the other player on first, without resuming its own queue.
 - **Results:** `_count` (tracks copied) and, when a player was started, `_index`, `_time` (seconds) and `_mode` (`play`, `pause` or `stop`). Problems come back as `error`.
 
+## Scrobbling
+
+Lyrion doesn't scrobble Nomad players, to Last.fm or ListenBrainz, because it can't see what Nomad plays while offline. Scrobble from the phone instead: install the Last.fm app, sign in, and let it scrobble other apps, including Nomad. It asks for notification access to see what's playing, and keeps scrobbles made offline until the phone is back online.
+
+The plugin keeps Lyrion's scrobbling account for Nomad players set to none, however it's chosen, and turns off any account chosen before the plugin was installed. Nomad's scrobbling settings page in Lyrion, and its Squeezebox controller menu, show this guidance instead of the choice of accounts.
+
 ## Test mode
 
 **Settings → Advanced → Nomad Companion** has a test mode, off by default. While it's on, the computer running Lyrion can control Nomad players too, so the app can be tested from it.

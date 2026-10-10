@@ -27,3 +27,9 @@ PLUGIN_NOMADCOMPANION_TEST_MODE
 
 PLUGIN_NOMADCOMPANION_TEST_MODE_DESC
 	EN	Lets the computer running Lyrion control Nomad players too, for testing the app from it. Leave this off otherwise.
+
+PLUGIN_NOMADCOMPANION_SCROBBLING_TITLE
+	EN	Scrobbling
+
+PLUGIN_NOMADCOMPANION_SCROBBLING
+	EN	Lyrion doesn't scrobble Nomad players, because it can't see what Nomad plays while offline. Scrobble from the phone instead: install the Last.fm app, sign in, and let it scrobble other apps, including Nomad. It asks for notification access to see what's playing, and keeps scrobbles made offline until the phone is back online.

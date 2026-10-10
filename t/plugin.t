@@ -50,6 +50,11 @@ package Slim::Player::Client {
 
 package Slim::Utils::Log {
 	sub addLogCategory { bless {}, 'FakeLog' }
+	sub import { no strict 'refs'; *{ caller() . '::logger' } = sub { bless {}, 'FakeLog' } }
+}
+
+package Slim::Utils::Timers {
+	sub setTimer {}
 }
 
 package FakeLog {
@@ -101,9 +106,9 @@ package main;
 
 $INC{$_} = 1 for qw(Slim/Plugin/Base.pm Slim/Control/Request.pm Slim/Player/Client.pm Slim/Player/Playlist.pm
                     Slim/Player/Source.pm Slim/Player/StreamingController.pm Slim/Utils/Log.pm Slim/Utils/Prefs.pm
-                    Slim/Utils/Strings.pm Slim/Web/Cometd/Manager.pm Slim/Web/HTTP.pm);
+                    Slim/Utils/Strings.pm Slim/Utils/Timers.pm Slim/Web/Cometd/Manager.pm Slim/Web/HTTP.pm);
 
-for my $module (qw(Rules Transfer)) {
+for my $module (qw(Hooks Rules Transfer Scrobbling)) {
 	require "$FindBin::Bin/../NomadCompanion/$module.pm";
 	$INC{"Plugins/NomadCompanion/$module.pm"} = 1;
 }

@@ -6,4 +6,8 @@
 		<input type="checkbox" name="pref_testMode" value="1" [% IF prefs.testMode %]checked[% END %] />
 	[% END %]
 
+	[% WRAPPER setting title="PLUGIN_NOMADCOMPANION_SCROBBLING_TITLE" desc="" %]
+		[% "PLUGIN_NOMADCOMPANION_SCROBBLING" | string %]
+	[% END %]
+
 [% PROCESS settings/footer.html %]

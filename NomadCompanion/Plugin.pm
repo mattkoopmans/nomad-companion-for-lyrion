@@ -25,7 +25,9 @@ use Slim::Utils::Strings qw(string);
 use Slim::Web::Cometd::Manager;
 use Slim::Web::HTTP;
 
+use Plugins::NomadCompanion::Hooks qw(wrap);
 use Plugins::NomadCompanion::Rules qw(isNomad isPhoneAddress changesPlayer namedPlayers requestName);
+use Plugins::NomadCompanion::Scrobbling;
 use Plugins::NomadCompanion::Transfer;
 
 my $log = Slim::Utils::Log->addLogCategory({
@@ -64,6 +66,9 @@ sub initPlugin {
 	Slim::Control::Request::addDispatch(['nomad', 'takeover'], [1, 0, 1, \&Plugins::NomadCompanion::Transfer::takeoverCommand]);
 	Slim::Control::Request::addDispatch(['nomad', 'copy'],     [1, 0, 1, \&Plugins::NomadCompanion::Transfer::copyCommand]);
 	Slim::Control::Request::addDispatch(['nomad', 'send'],     [1, 0, 1, \&Plugins::NomadCompanion::Transfer::sendCommand]);
+
+	# Lyrion doesn't scrobble Nomad players; the phone does.
+	Plugins::NomadCompanion::Scrobbling::init();
 
 	eval { require Plugins::NomadCompanion::Settings };
 
@@ -227,22 +232,11 @@ sub _refuse {
 	$request->executeDone();
 }
 
-# Replaces Lyrion's function $name with $wrapper, which is passed the
-# original function first.
+# Hooks the lock into Lyrion's function $name, see Plugins::NomadCompanion::Hooks.
 sub _wrap {
 	my ($name, $wrapper) = @_;
 
-	no strict 'refs';
-	no warnings 'redefine';
-
-	if (!defined &$name) {
-		$log->error("$name is missing, so Nomad's player is not fully protected. Has Lyrion changed?");
-		return;
-	}
-
-	my $original = \&$name;
-
-	*$name = sub { $wrapper->($original, @_) };
+	wrap($name, $wrapper) or $log->error("$name is missing, so Nomad's player is not fully protected. Has Lyrion changed?");
 }
 
 1;
