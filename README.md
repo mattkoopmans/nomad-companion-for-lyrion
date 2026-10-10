@@ -2,6 +2,20 @@
 
 A Lyrion plugin for Nomad Player, the Android app: only the phone running Nomad can control its player. Lyrion's web interface and other controllers can still see what Nomad is playing.
 
+## Installation
+
+1. In Lyrion go to **Settings → Manage Plugins**
+2. At the bottom, under **Additional Repositories**, add:
+   ```
+   https://raw.githubusercontent.com/mattkoopmans/nomad-companion-for-lyrion/main/repo.xml
+   ```
+3. Click **Apply**, then find **Nomad Companion** in the plugin list, tick it and click **Apply** again
+4. Restart Lyrion when prompted
+
+Lyrion will then offer new versions automatically.
+
+To install by hand instead, unzip `NomadCompanion-x.y.z.zip` from the [latest release](https://github.com/mattkoopmans/nomad-companion-for-lyrion/releases/latest) into Lyrion's plugin folder (shown under **Settings → Information → Plugin Folders**) and restart Lyrion.
+
 ## What counts as control
 
 [`Rules.pm`](NomadCompanion/Rules.pm) holds the definitions:
@@ -22,6 +36,14 @@ A Lyrion plugin for Nomad Player, the Android app: only the phone running Nomad 
 
 - `NomadCompanion/`: the plugin itself, installed as `Plugins/NomadCompanion` in Lyrion's plugin folder
 - `t/`: tests, run with `prove t/`
+- `repo.xml`: the plugin repository Lyrion reads; the release workflow keeps it up to date
+
+## Releasing
+
+1. Update `<version>` in `NomadCompanion/install.xml`, then commit and push
+2. Tag and push, e.g. `git tag v0.2.0 && git push origin v0.2.0`
+
+The [release workflow](.github/workflows/release.yml) runs the tests, builds the zip, publishes it as a GitHub release and then points `repo.xml` at it. Tags on a `Testing` branch become pre-releases in `repo-testing.xml` instead.
 
 ## License
 
