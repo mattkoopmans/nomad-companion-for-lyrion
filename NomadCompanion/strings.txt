@@ -6,3 +6,24 @@ PLUGIN_NOMADCOMPANION_DESC
 
 PLUGIN_NOMADCOMPANION_REFUSED
 	EN	Only the phone running Nomad can control this player.
+
+PLUGIN_NOMADCOMPANION_NOT_NOMAD
+	EN	This only works on a Nomad player.
+
+PLUGIN_NOMADCOMPANION_NO_PLAYER
+	EN	That player isn't connected to Lyrion.
+
+PLUGIN_NOMADCOMPANION_NOTHING_TO_PLAY
+	EN	%s has nothing to play.
+
+PLUGIN_NOMADCOMPANION_OTHER_NOMAD
+	EN	Music can't be moved between two Nomad players.
+
+PLUGIN_NOMADCOMPANION_BAD_MODE
+	EN	The mode must be "replace" or "append".
+
+PLUGIN_NOMADCOMPANION_TEST_MODE
+	EN	Test mode
+
+PLUGIN_NOMADCOMPANION_TEST_MODE_DESC
+	EN	Lets the computer running Lyrion control Nomad players too, for testing the app from it. Leave this off otherwise.

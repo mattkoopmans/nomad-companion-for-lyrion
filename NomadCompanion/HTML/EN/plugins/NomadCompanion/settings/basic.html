@@ -1,0 +1,9 @@
+[% PROCESS settings/header.html %]
+
+	<div class="prefDesc">[% "PLUGIN_NOMADCOMPANION_DESC" | string %]</div>
+
+	[% WRAPPER setting title="PLUGIN_NOMADCOMPANION_TEST_MODE" desc="PLUGIN_NOMADCOMPANION_TEST_MODE_DESC" %]
+		<input type="checkbox" name="pref_testMode" value="1" [% IF prefs.testMode %]checked[% END %] />
+	[% END %]
+
+[% PROCESS settings/footer.html %]

@@ -62,7 +62,7 @@ sub changesPlayer {
 	}
 
 	# Commands that don't need a player act on the server instead:
-	# favourites, saved playlists, preferences and rescans.
+	# favorites, saved playlists, preferences and rescans.
 	return 0 unless $request->needClient();
 
 	return $readingCommands{$name} ? 0 : 1;

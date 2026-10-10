@@ -42,7 +42,22 @@ Known gaps:
 
 | Request | Result |
 | --- | --- |
-| `nomad version ?` | `_version`: the installed plugin version |
+| `nomad version ?` | `_version`: the installed plugin version; `_test_mode`: 1 if test mode is on |
+| `nomad takeover player:<id>` | Nomad continues from the other player, which stops |
+| `nomad copy player:<id> mode:replace\|append start:0\|1` | Nomad gets the other player's queue; the other player is left alone |
+| `nomad send player:<id>` | The other player continues from Nomad, which stops |
+
+The last three move music without syncing the players, and only Nomad's phone can send them. They're aimed at the Nomad player, and `player` must be another player that isn't a Nomad.
+
+- **Queues** are copied in play order, with shuffle flattened, and repeat copied across. A player that stops keeps its own queue.
+- **Starting:** the receiving player starts at the same track and time. It plays if the other player was playing; otherwise it's held paused at that point, and pressing play carries on from there. Tracks that can't be started part-way, such as radio streams, start from the beginning.
+- **Copy:** `mode:replace` (the default) replaces Nomad's queue, starting it as above with `start:1`, or leaving it stopped at the top with `start:0`. `mode:append` adds the tracks to the end of Nomad's queue without touching its playback.
+- **Send** switches the other player on first, without resuming its own queue.
+- **Results:** `_count` (tracks copied) and, when a player was started, `_index`, `_time` (seconds) and `_mode` (`play`, `pause` or `stop`). Problems come back as `error`.
+
+## Test mode
+
+**Settings → Advanced → Nomad Companion** has a test mode, off by default. While it's on, the computer running Lyrion can control Nomad players too, so the app can be tested from it.
 
 ## Layout
 

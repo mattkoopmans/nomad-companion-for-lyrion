@@ -57,6 +57,16 @@ package FakeLog {
 	sub error { push @main::logged, "error: $_[1]" }
 }
 
+package Slim::Utils::Prefs {
+	our %values;
+	sub import { no strict 'refs'; *{ caller() . '::preferences' } = sub { bless {}, 'FakePrefs' } }
+}
+
+package FakePrefs {
+	sub init { my ($self, $defaults) = @_; $Slim::Utils::Prefs::values{$_} //= $defaults->{$_} for keys %$defaults }
+	sub get { $Slim::Utils::Prefs::values{ $_[1] } }
+}
+
 package Slim::Utils::Strings {
 	sub import { no strict 'refs'; *{ caller() . '::string' } = \&string }
 	sub string { $_[0] }
@@ -89,11 +99,15 @@ package FakePlayer {
 
 package main;
 
-$INC{$_} = 1 for qw(Slim/Plugin/Base.pm Slim/Control/Request.pm Slim/Player/Client.pm Slim/Utils/Log.pm
+$INC{$_} = 1 for qw(Slim/Plugin/Base.pm Slim/Control/Request.pm Slim/Player/Client.pm Slim/Player/Playlist.pm
+                    Slim/Player/Source.pm Slim/Player/StreamingController.pm Slim/Utils/Log.pm Slim/Utils/Prefs.pm
                     Slim/Utils/Strings.pm Slim/Web/Cometd/Manager.pm Slim/Web/HTTP.pm);
 
-require "$FindBin::Bin/../NomadCompanion/Rules.pm";
-$INC{'Plugins/NomadCompanion/Rules.pm'} = 1;
+for my $module (qw(Rules Transfer)) {
+	require "$FindBin::Bin/../NomadCompanion/$module.pm";
+	$INC{"Plugins/NomadCompanion/$module.pm"} = 1;
+}
+
 require "$FindBin::Bin/../NomadCompanion/Plugin.pm";
 
 Plugins::NomadCompanion::Plugin->initPlugin();
@@ -230,10 +244,27 @@ subtest 'a failed check lets the request through' => sub {
 	like($logged[-1], qr/^error: Couldn't check a request/, 'error logged');
 };
 
+subtest 'test mode' => sub {
+	refused(run(jsonrpc('127.0.0.1', $nomad, 'pause')), 'this computer, while test mode is off');
+
+	local $Slim::Utils::Prefs::values{testMode} = 1;
+
+	ok(ran(run(jsonrpc('127.0.0.1', $nomad, 'pause'))), 'this computer, while test mode is on');
+	ok(ran(run(jsonrpc('::ffff:127.0.0.1', $nomad, 'pause'))), '... over IPv6');
+	refused(run(jsonrpc($laptop, $nomad, 'pause')), 'another device, while test mode is on');
+};
+
+subtest 'commands' => sub {
+	ok($dispatched{"nomad $_"}, "nomad $_") for qw(takeover copy send);
+	refused(run(jsonrpc($laptop, $nomad, 'nomad takeover', params => { player => $kitchen->id })), 'another device moving music into Nomad');
+	refused(run(jsonrpc($laptop, $nomad, 'nomad send', params => { player => $kitchen->id })), 'another device sending Nomad\'s music away');
+};
+
 subtest 'version' => sub {
 	my $request = Slim::Control::Request->new;
 	$dispatched{'nomad version ?'}->[3]->($request);
 	is($request->{results}{_version}, '0.2.0', 'reported');
+	is($request->{results}{_test_mode}, 0, 'test mode reported');
 	is($request->{status}, 'done', 'done');
 };
 

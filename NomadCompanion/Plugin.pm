@@ -14,22 +14,27 @@ package Plugins::NomadCompanion::Plugin;
 use strict;
 use base qw(Slim::Plugin::Base);
 
+use IO::Socket::IP;
 use Scalar::Util qw(blessed looks_like_number);
 
 use Slim::Control::Request;
 use Slim::Player::Client;
 use Slim::Utils::Log;
+use Slim::Utils::Prefs;
 use Slim::Utils::Strings qw(string);
 use Slim::Web::Cometd::Manager;
 use Slim::Web::HTTP;
 
 use Plugins::NomadCompanion::Rules qw(isNomad isPhoneAddress changesPlayer namedPlayers requestName);
+use Plugins::NomadCompanion::Transfer;
 
 my $log = Slim::Utils::Log->addLogCategory({
 	category     => 'plugin.nomadcompanion',
 	defaultLevel => 'WARN',
 	description  => 'PLUGIN_NOMADCOMPANION',
 });
+
+my $prefs = preferences('plugin.nomadcompanion');
 
 # The address of the device behind the request being run: undef for Lyrion's
 # own requests, or '' when a device sent it but its address is unknown.
@@ -42,6 +47,9 @@ my %cometdAddresses;
 sub initPlugin {
 	my $class = shift;
 
+	# Test mode lets requests from this computer through the lock.
+	$prefs->init({ testMode => 0 });
+
 	# "nomad version ?" tells the app that the plugin is installed, and which
 	# version, for its settings screen.
 	#                                                              |requires Client
@@ -50,6 +58,21 @@ sub initPlugin {
 	#                                                              |  |  |  |Function to call
 	#                                                              C  Q  T  F
 	Slim::Control::Request::addDispatch(['nomad', 'version', '?'], [0, 1, 0, \&versionQuery]);
+
+	# Moving music between Nomad and another player, see
+	# Plugins::NomadCompanion::Transfer.
+	Slim::Control::Request::addDispatch(['nomad', 'takeover'], [1, 0, 1, \&Plugins::NomadCompanion::Transfer::takeoverCommand]);
+	Slim::Control::Request::addDispatch(['nomad', 'copy'],     [1, 0, 1, \&Plugins::NomadCompanion::Transfer::copyCommand]);
+	Slim::Control::Request::addDispatch(['nomad', 'send'],     [1, 0, 1, \&Plugins::NomadCompanion::Transfer::sendCommand]);
+
+	eval { require Plugins::NomadCompanion::Settings };
+
+	if ($@) {
+		$log->warn("Couldn't load the settings page: $@");
+	}
+	else {
+		Plugins::NomadCompanion::Settings->new;
+	}
 
 	_wrap('Slim::Control::Request::execute', \&_execute);
 
@@ -90,6 +113,7 @@ sub versionQuery {
 	}
 
 	$request->addResult('_version', __PACKAGE__->_pluginDataFor('version'));
+	$request->addResult('_test_mode', $prefs->get('testMode') ? 1 : 0);
 	$request->setStatusDone();
 }
 
@@ -152,6 +176,9 @@ sub _socketAddress {
 sub _protectedPlayer {
 	my ($request, $address) = @_;
 
+	# Test mode lets this computer through, so the app can be tested from it.
+	return undef if $prefs->get('testMode') && _isServerAddress($address);
+
 	my @changed = map { _player($_) } namedPlayers($request);
 
 	# Synced players share one queue, so changing one changes them all.
@@ -164,6 +191,16 @@ sub _protectedPlayer {
 	}
 
 	return undef;
+}
+
+# Whether $address belongs to the computer Lyrion runs on. An address can
+# only be bound to if one of this computer's network interfaces has it.
+sub _isServerAddress {
+	my $address = shift || return 0;
+
+	$address =~ s/^::ffff://i;
+
+	return IO::Socket::IP->new(LocalHost => $address, Proto => 'udp') ? 1 : 0;
 }
 
 # A player by ID, or by number as "sync" also accepts.
