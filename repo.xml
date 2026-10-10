@@ -9,7 +9,7 @@
       <desc lang="EN">Lets only the phone running Nomad Player control it. Other devices can still see what it's playing.</desc>
       <category>tools</category>
       <url>https://github.com/mattkoopmans/nomad-companion-for-lyrion/releases/download/v0.1.0/NomadCompanion-0.1.0.zip</url>
-      <sha></sha>
+      <sha>a0c12d956f5171f945fa1945119ecddba2007bd4</sha>
       <creator>Matt Koopmans</creator>
       <email>matt.koopmans@gmail.com</email>
       <link>https://github.com/mattkoopmans/nomad-companion-for-lyrion</link>
