@@ -22,3 +22,7 @@ A Lyrion plugin for Nomad Player, the Android app: only the phone running Nomad 
 
 - `NomadCompanion/`: the plugin itself, installed as `Plugins/NomadCompanion` in Lyrion's plugin folder
 - `t/`: tests, run with `prove t/`
+
+## License
+
+GPL-3.0. See [LICENSE](LICENSE).
