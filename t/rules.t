@@ -4,13 +4,10 @@ use warnings;
 use FindBin;
 use Test::More;
 
-require "$FindBin::Bin/../NomadCompanion/Rules.pm";
-
-*changesPlayer  = \&Plugins::NomadCompanion::Rules::changesPlayer;
-*namedPlayers   = \&Plugins::NomadCompanion::Rules::namedPlayers;
-*requestName    = \&Plugins::NomadCompanion::Rules::requestName;
-*isNomad        = \&Plugins::NomadCompanion::Rules::isNomad;
-*isPhoneAddress = \&Plugins::NomadCompanion::Rules::isPhoneAddress;
+BEGIN {
+	require "$FindBin::Bin/../NomadCompanion/Rules.pm";
+	Plugins::NomadCompanion::Rules->import(qw(isNomad isPhoneAddress changesPlayer namedPlayers requestName));
+}
 
 # Stand-ins for Lyrion's request and player objects. Lyrion splits a request
 # line into the verbs found in its dispatch table and the parameters after

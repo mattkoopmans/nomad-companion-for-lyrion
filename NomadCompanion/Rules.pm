@@ -11,6 +11,10 @@ package Plugins::NomadCompanion::Rules;
 
 use strict;
 
+use Exporter qw(import);
+
+our @EXPORT_OK = qw(isNomad isPhoneAddress changesPlayer namedPlayers requestName);
+
 # Commands that only read from the player, so other devices may still send
 # them.
 my %readingCommands = (

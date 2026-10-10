@@ -26,6 +26,18 @@ To install by hand instead, unzip `NomadCompanion-x.y.z.zip` from the [latest re
 - **Naming the player** counts too: syncing another player with Nomad, disconnecting Nomad, or transferring a queue onto it.
 - **Lyrion's own actions**, such as moving to the next track, are always allowed.
 
+## How it works
+
+[`Plugin.pm`](NomadCompanion/Plugin.pm) checks every request as Lyrion runs it and works out which device sent it: from the connection for JSON-RPC (Material and most apps), the command-line interface, Cometd (Squeezebox controllers and some apps) and the classic web interface. A request made while another one runs, such as a plugin acting for a controller, counts as coming from the same device.
+
+A refused request isn't run. The device gets an `error` result ("Only the phone running Nomad can control this player.") and Lyrion's server log notes the refusal.
+
+Known gaps:
+
+- **Delayed requests:** a request made later, for example after fetching a menu from the internet, can't be traced to a device and is let through. The classic web interface does this when playing from online menus such as Tidal.
+- **Changing network:** after the phone moves to another network, its requests are refused until its player has reconnected from the new address.
+- **Not a security boundary:** any device can still turn the plugin off in Lyrion's settings. The lock prevents accidents, not deliberate changes.
+
 ## Commands for the app
 
 | Request | Result |
