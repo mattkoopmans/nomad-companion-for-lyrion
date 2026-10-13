@@ -187,3 +187,37 @@ PLUGIN_NOMADCOMPANION_SCROBBLING
 	RU	Lyrion не скробблит плееры Nomad, потому что не видит, что Nomad воспроизводит офлайн. Вместо этого Nomad сам скробблит в Last.fm: на телефоне откройте в Nomad "Settings" и нажмите "Sign in to Last.fm". Треки, прослушанные офлайн, отправляются, как только телефон снова в сети. Если приложение Last.fm тоже скробблит Nomad, отключите там Nomad, иначе прослушивания будут засчитаны дважды.
 	SV	Lyrion scrobblar inte Nomad-spelare, eftersom den inte ser vad Nomad spelar offline. Nomad scrobblar i stället själv till Last.fm: öppna "Settings" i Nomad på telefonen och tryck på "Sign in to Last.fm". Det som spelas offline skickas när telefonen är online igen. Om Last.fm-appen också scrobblar Nomad, stäng av Nomad där, annars räknas spelningarna dubbelt.
 	ZH_CN	Lyrion 不会为 Nomad 播放器 scrobble，因为它看不到 Nomad 离线时播放的内容。Nomad 会自己向 Last.fm scrobble：在手机上打开 Nomad 的 "Settings"，然后点按 "Sign in to Last.fm"。离线播放的记录会在手机重新联网后发送。如果 Last.fm 应用也在为 Nomad scrobble，请在其中关闭 Nomad，否则播放会被计算两次。
+
+PLUGIN_NOMADCOMPANION_NAME
+	CS	Název přehrávače Nomad se přebírá z názvu telefonu, proto ho zde nelze změnit. Chcete-li ho přejmenovat, změňte název telefonu v Nastavení telefonu v části O telefonu. Lyrion zobrazí nový název, až se Nomad příště připojí.
+	DA	Nomads navn kommer fra telefonens navn, så det kan ikke ændres her. Omdøb telefonen i telefonens Indstillinger under Om telefonen. Lyrion viser det nye navn, næste gang Nomad opretter forbindelse.
+	DE	Der Name von Nomad stammt vom Namen des Telefons und kann hier nicht geändert werden. Ändern Sie zum Umbenennen den Namen des Telefons in dessen Einstellungen unter Telefoninfo. Lyrion zeigt den neuen Namen, wenn sich Nomad das nächste Mal verbindet.
+	EN	Nomad's name comes from the phone's name, so it can't be changed here. To rename it, change the phone's name in the phone's Settings, under About phone. Lyrion shows the new name the next time Nomad connects.
+	ES	El nombre de Nomad procede del nombre del teléfono, por lo que no se puede cambiar aquí. Para cambiarlo, cambie el nombre del teléfono en sus Ajustes, en Información del teléfono. Lyrion mostrará el nuevo nombre la próxima vez que Nomad se conecte.
+	FI	Nomadin nimi tulee puhelimen nimestä, joten sitä ei voi muuttaa täällä. Nimeä se uudelleen vaihtamalla puhelimen nimi puhelimen Asetuksissa kohdassa Tietoja puhelimesta. Lyrion näyttää uuden nimen, kun Nomad muodostaa seuraavan kerran yhteyden.
+	FR	Le nom de Nomad vient du nom du téléphone, il ne peut donc pas être modifié ici. Pour le renommer, changez le nom du téléphone dans ses Paramètres, sous À propos du téléphone. Lyrion affichera le nouveau nom à la prochaine connexion de Nomad.
+	HU	A Nomad neve a telefon nevéből származik, ezért itt nem módosítható. Az átnevezéshez módosítsa a telefon nevét a telefon Beállítások menüjében, A telefonról részben. A Lyrion a Nomad következő csatlakozásakor mutatja az új nevet.
+	IT	Il nome di Nomad deriva dal nome del telefono, quindi non può essere cambiato qui. Per rinominarlo, cambia il nome del telefono nelle sue Impostazioni, in Info telefono. Lyrion mostrerà il nuovo nome la prossima volta che Nomad si connette.
+	NL	De naam van Nomad komt van de naam van de telefoon en kan hier niet worden gewijzigd. Wijzig voor een andere naam de naam van de telefoon in de Instellingen van de telefoon, onder Over de telefoon. Lyrion toont de nieuwe naam zodra Nomad weer verbinding maakt.
+	NO	Navnet til Nomad kommer fra telefonens navn, så det kan ikke endres her. Gi den nytt navn ved å endre telefonens navn i telefonens Innstillinger, under Om telefonen. Lyrion viser det nye navnet neste gang Nomad kobler til.
+	PL	Nazwa Nomad pochodzi z nazwy telefonu, więc nie można jej tu zmienić. Aby ją zmienić, zmień nazwę telefonu w jego Ustawieniach, w sekcji Informacje o telefonie. Lyrion pokaże nową nazwę przy następnym połączeniu Nomad.
+	RU	Имя Nomad берётся из имени телефона, поэтому изменить его здесь нельзя. Чтобы переименовать его, измените имя телефона в его Настройках, в разделе «О телефоне». Lyrion покажет новое имя при следующем подключении Nomad.
+	SV	Nomads namn kommer från telefonens namn, så det kan inte ändras här. Byt namn genom att ändra telefonens namn i telefonens Inställningar, under Om telefonen. Lyrion visar det nya namnet nästa gång Nomad ansluter.
+	ZH_CN	Nomad 的名称来自手机名称，因此无法在此更改。要重命名，请在手机的“设置”中的“关于手机”里更改手机名称。Nomad 下次连接时，Lyrion 会显示新名称。
+
+PLUGIN_NOMADCOMPANION_AUDIO
+	CS	Prolínání, zesilování a úprava hlasitosti (ReplayGain) jsou u přehrávačů Nomad vypnuté, protože je Nomad nedokáže použít.
+	DA	Blød overgang, indtoning og justering af lydstyrken (ReplayGain) er slået fra for Nomad-afspillere, fordi Nomad ikke kan anvende dem.
+	DE	Überblendung, Einblendung und Lautstärken-Normalisierung (ReplayGain) sind für Nomad-Player ausgeschaltet, weil Nomad sie nicht anwenden kann.
+	EN	Crossfade, fade-in and Volume Adjustment (ReplayGain) are off for Nomad players, because Nomad can't apply them.
+	ES	El encadenado, el fundido de entrada y el ajuste de volumen (ReplayGain) están desactivados para los reproductores Nomad, porque Nomad no puede aplicarlos.
+	FI	Ristihäivytys, häivytys sisään ja äänenvoimakkuuden säätö (ReplayGain) ovat pois päältä Nomad-soittimissa, koska Nomad ei voi käyttää niitä.
+	FR	Les transitions, la montée en volume et l'ajustement du volume (ReplayGain) sont désactivés pour les platines Nomad, car Nomad ne peut pas les appliquer.
+	HU	Az áttűnés, a felerősítés és a hangerő beállítása (ReplayGain) ki van kapcsolva a Nomad lejátszóknál, mert a Nomad nem tudja alkalmazni őket.
+	IT	Dissolvenza incrociata, dissolvenza in entrata e correzione volume (ReplayGain) sono disattivate per i lettori Nomad, perché Nomad non può applicarle.
+	NL	Crossfade, infaden en volumeaanpassing (ReplayGain) staan uit voor Nomad-muziekspelers, omdat Nomad ze niet kan toepassen.
+	NO	Krysstoning, inntoning og lydstyrkekontroll (ReplayGain) er slått av for Nomad-spillere, fordi Nomad ikke kan bruke dem.
+	PL	Przenikanie, płynne zgłaśnianie i regulacja głośności (ReplayGain) są wyłączone dla odtwarzaczy Nomad, ponieważ Nomad nie może ich zastosować.
+	RU	Перекрестное затухание, плавное нарастание громкости и регулировка громкости (ReplayGain) отключены для плееров Nomad, потому что Nomad не может их применить.
+	SV	Korstoning, intoning och volymjustering (ReplayGain) är avstängda för Nomad-spelare, eftersom Nomad inte kan tillämpa dem.
+	ZH_CN	Nomad 播放器已关闭音频同时淡出淡入、淡入和音量调整（ReplayGain），因为 Nomad 无法应用这些功能。

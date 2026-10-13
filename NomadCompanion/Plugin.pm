@@ -27,6 +27,7 @@ use Slim::Web::HTTP;
 
 use Plugins::NomadCompanion::Hooks qw(wrap);
 use Plugins::NomadCompanion::Rules qw(isNomad isPhoneAddress changesPlayer namedPlayers requestName);
+use Plugins::NomadCompanion::PlayerSettings;
 use Plugins::NomadCompanion::Scrobbling;
 use Plugins::NomadCompanion::Transfer;
 
@@ -69,6 +70,9 @@ sub initPlugin {
 
 	# Lyrion doesn't scrobble Nomad players; the phone does.
 	Plugins::NomadCompanion::Scrobbling::init();
+
+	# Nor does it rename them, crossfade, fade or adjust their volume.
+	Plugins::NomadCompanion::PlayerSettings::init();
 
 	eval { require Plugins::NomadCompanion::Settings };
 

@@ -4,7 +4,7 @@
 	<description>PLUGIN_NOMADCOMPANION_DESC</description>
 	<creator>Matt Koopmans</creator>
 	<id>05db4ae8-a0bc-453e-9926-d38beb36a0c2</id>
-	<version>0.4.2</version>
+	<version>0.5.0</version>
 	<module>Plugins::NomadCompanion::Plugin</module>
 	<defaultState>enabled</defaultState>
 	<optionsURL>plugins/NomadCompanion/settings/basic.html</optionsURL>

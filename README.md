@@ -61,6 +61,12 @@ Lyrion doesn't scrobble Nomad players, to Last.fm or ListenBrainz, because it ca
 
 The plugin keeps Lyrion's scrobbling account for Nomad players set to none, however it's chosen, and turns off any account chosen before the plugin was installed. Nomad's scrobbling settings page in Lyrion, and its Squeezebox controller menu, show this guidance instead of the choice of accounts.
 
+## Player settings
+
+Nomad can't apply Lyrion's crossfade, fade-in or Volume Adjustment (ReplayGain), so for Nomad players they're off, and stay off however they're set. Nomad players tell Lyrion they can't do them, so Lyrion doesn't send them, and its Audio settings page leaves them out and says why. Material's player settings still show them, but changes don't stick.
+
+A Nomad player's name is the phone's name followed by "[Nomad]", and it can't be changed in Lyrion. The Basic settings page shows it read-only, with instructions to rename the phone instead, in the phone's Settings under About phone. Lyrion shows the new name the next time Nomad connects.
+
 ## Test mode
 
 **Settings → Advanced → Nomad Companion** has a test mode, off by default. While it's on, the computer running Lyrion can control Nomad players too, so the app can be tested from it.

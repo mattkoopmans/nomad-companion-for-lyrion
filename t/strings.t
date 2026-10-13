@@ -20,6 +20,8 @@ my %kept = (
 	PLUGIN_NOMADCOMPANION_NOTHING_TO_PLAY => ['%s'],
 	PLUGIN_NOMADCOMPANION_BAD_MODE        => ['"replace"', '"append"'],
 	PLUGIN_NOMADCOMPANION_SCROBBLING      => ['Sign in to Last.fm', 'Last.fm', 'Nomad'],
+	PLUGIN_NOMADCOMPANION_NAME            => ['Nomad', 'Lyrion'],
+	PLUGIN_NOMADCOMPANION_AUDIO           => ['ReplayGain', 'Nomad'],
 );
 
 open my $file, '<:encoding(UTF-8)', "$FindBin::Bin/../NomadCompanion/strings.txt" or die $!;

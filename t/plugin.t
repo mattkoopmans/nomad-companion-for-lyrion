@@ -73,7 +73,7 @@ package FakePrefs {
 }
 
 package Slim::Utils::Strings {
-	sub import { no strict 'refs'; *{ caller() . '::string' } = \&string }
+	sub import { no strict 'refs'; *{ caller() . '::string' } = \&string; *{ caller() . '::cstring' } = sub { $_[1] } }
 	sub string { $_[0] }
 }
 
@@ -108,7 +108,7 @@ $INC{$_} = 1 for qw(Slim/Plugin/Base.pm Slim/Control/Request.pm Slim/Player/Clie
                     Slim/Player/Source.pm Slim/Player/StreamingController.pm Slim/Utils/Log.pm Slim/Utils/Prefs.pm
                     Slim/Utils/Strings.pm Slim/Utils/Timers.pm Slim/Web/Cometd/Manager.pm Slim/Web/HTTP.pm);
 
-for my $module (qw(Hooks Rules Transfer Scrobbling)) {
+for my $module (qw(Hooks Rules Transfer Scrobbling PlayerSettings)) {
 	require "$FindBin::Bin/../NomadCompanion/$module.pm";
 	$INC{"Plugins/NomadCompanion/$module.pm"} = 1;
 }
