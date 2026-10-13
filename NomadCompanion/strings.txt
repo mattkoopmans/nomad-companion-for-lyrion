@@ -2,34 +2,188 @@ PLUGIN_NOMADCOMPANION
 	EN	Nomad Companion
 
 PLUGIN_NOMADCOMPANION_DESC
+	CS	Ovládat přehrávač Nomad LMS Player může jen telefon, na kterém běží. Ostatní zařízení stále vidí, co hraje.
+	DA	Kun telefonen, der kører Nomad LMS Player, kan styre dens afspiller. Andre enheder kan stadig se, hvad den spiller.
+	DE	Nur das Telefon, auf dem Nomad LMS Player läuft, kann dessen Player steuern. Andere Geräte sehen weiterhin, was gespielt wird.
 	EN	Lets only the phone running Nomad LMS Player control it. Other devices can still see what it's playing.
+	ES	Solo el teléfono que ejecuta Nomad LMS Player puede controlar su reproductor. Los demás dispositivos pueden seguir viendo lo que reproduce.
+	FI	Vain puhelin, jossa Nomad LMS Player on käytössä, voi ohjata sen soitinta. Muut laitteet näkevät yhä, mitä se soittaa.
+	FR	Seul le téléphone qui exécute Nomad LMS Player peut contrôler sa platine. Les autres appareils peuvent toujours voir ce qu'elle joue.
+	HU	Csak a Nomad LMS Playert futtató telefon vezérelheti a lejátszóját. Más eszközök továbbra is láthatják, mit játszik.
+	IT	Solo il telefono su cui è in esecuzione Nomad LMS Player può controllarne il lettore. Gli altri dispositivi possono comunque vedere cosa sta riproducendo.
+	NL	Alleen de telefoon waarop Nomad LMS Player draait, kan de bijbehorende muziekspeler bedienen. Andere apparaten kunnen nog steeds zien wat er speelt.
+	NO	Bare telefonen som kjører Nomad LMS Player, kan styre spilleren sin. Andre enheter kan fortsatt se hva den spiller.
+	PL	Tylko telefon, na którym działa Nomad LMS Player, może sterować jego odtwarzaczem. Inne urządzenia nadal widzą, co jest odtwarzane.
+	RU	Управлять плеером может только телефон, на котором работает Nomad LMS Player. Другие устройства по-прежнему видят, что он играет.
+	SV	Bara telefonen som kör Nomad LMS Player kan styra dess spelare. Andra enheter kan fortfarande se vad den spelar.
+	ZH_CN	只有运行 Nomad LMS Player 的手机才能控制它的播放器。其他设备仍可查看正在播放的内容。
 
 PLUGIN_NOMADCOMPANION_REFUSED
+	CS	Tento přehrávač může ovládat pouze telefon, na kterém běží Nomad.
+	DA	Kun telefonen, der kører Nomad, kan styre denne afspiller.
+	DE	Nur das Telefon, auf dem Nomad läuft, kann diesen Player steuern.
 	EN	Only the phone running Nomad can control this player.
+	ES	Solo el teléfono que ejecuta Nomad puede controlar este reproductor.
+	FI	Vain puhelin, jossa Nomad on käytössä, voi ohjata tätä soitinta.
+	FR	Seul le téléphone qui exécute Nomad peut contrôler cette platine.
+	HU	Ezt a lejátszót csak a Nomadot futtató telefon vezérelheti.
+	IT	Solo il telefono su cui è in esecuzione Nomad può controllare questo lettore.
+	NL	Alleen de telefoon waarop Nomad draait, kan deze muziekspeler bedienen.
+	NO	Bare telefonen som kjører Nomad, kan styre denne spilleren.
+	PL	Tylko telefon, na którym działa Nomad, może sterować tym odtwarzaczem.
+	RU	Управлять этим плеером может только телефон, на котором работает Nomad.
+	SV	Bara telefonen som kör Nomad kan styra den här spelaren.
+	ZH_CN	只有运行 Nomad 的手机才能控制此播放器。
 
 PLUGIN_NOMADCOMPANION_NOT_NOMAD
+	CS	Funguje to pouze u přehrávače Nomad.
+	DA	Dette virker kun på en Nomad-afspiller.
+	DE	Das funktioniert nur mit einem Nomad-Player.
 	EN	This only works on a Nomad player.
+	ES	Esto solo funciona con un reproductor Nomad.
+	FI	Tämä toimii vain Nomad-soittimella.
+	FR	Cela ne fonctionne qu'avec une platine Nomad.
+	HU	Ez csak Nomad lejátszóval működik.
+	IT	Funziona solo con un lettore Nomad.
+	NL	Dit werkt alleen met een Nomad-muziekspeler.
+	NO	Dette fungerer bare med en Nomad-spiller.
+	PL	To działa tylko z odtwarzaczem Nomad.
+	RU	Это работает только с плеером Nomad.
+	SV	Det här fungerar bara med en Nomad-spelare.
+	ZH_CN	此功能仅适用于 Nomad 播放器。
 
 PLUGIN_NOMADCOMPANION_NO_PLAYER
+	CS	Tento přehrávač není připojen k Lyrion.
+	DA	Den afspiller er ikke forbundet til Lyrion.
+	DE	Dieser Player ist nicht mit Lyrion verbunden.
 	EN	That player isn't connected to Lyrion.
+	ES	Ese reproductor no está conectado a Lyrion.
+	FI	Soitin ei ole yhteydessä Lyrioniin.
+	FR	Cette platine n'est pas connectée à Lyrion.
+	HU	Ez a lejátszó nem csatlakozik a Lyrionhoz.
+	IT	Quel lettore non è collegato a Lyrion.
+	NL	Die muziekspeler is niet met Lyrion verbonden.
+	NO	Den spilleren er ikke koblet til Lyrion.
+	PL	Ten odtwarzacz nie jest połączony z Lyrion.
+	RU	Этот плеер не подключён к Lyrion.
+	SV	Den spelaren är inte ansluten till Lyrion.
+	ZH_CN	该播放器未连接到 Lyrion。
 
 PLUGIN_NOMADCOMPANION_NOTHING_TO_PLAY
+	CS	%s nemá co přehrát.
+	DA	%s har intet at afspille.
+	DE	%s hat nichts zum Abspielen.
 	EN	%s has nothing to play.
+	ES	%s no tiene nada que reproducir.
+	FI	Soittimella %s ei ole mitään soitettavaa.
+	FR	%s n'a rien à lire.
+	HU	%s: nincs mit lejátszani.
+	IT	%s non ha nulla da riprodurre.
+	NL	%s heeft niets om af te spelen.
+	NO	%s har ingenting å spille.
+	PL	%s nie ma nic do odtworzenia.
+	RU	%s: нечего воспроизводить.
+	SV	%s har inget att spela.
+	ZH_CN	%s 没有可播放的内容。
 
 PLUGIN_NOMADCOMPANION_OTHER_NOMAD
+	CS	Hudbu nelze přesouvat mezi dvěma přehrávači Nomad.
+	DA	Musik kan ikke flyttes mellem to Nomad-afspillere.
+	DE	Musik kann nicht zwischen zwei Nomad-Playern verschoben werden.
 	EN	Music can't be moved between two Nomad players.
+	ES	No se puede mover música entre dos reproductores Nomad.
+	FI	Musiikkia ei voi siirtää kahden Nomad-soittimen välillä.
+	FR	La musique ne peut pas être déplacée entre deux platines Nomad.
+	HU	Zenét nem lehet két Nomad lejátszó között áthelyezni.
+	IT	Non è possibile spostare la musica tra due lettori Nomad.
+	NL	Muziek kan niet tussen twee Nomad-muziekspelers worden verplaatst.
+	NO	Musikk kan ikke flyttes mellom to Nomad-spillere.
+	PL	Nie można przenosić muzyki między dwoma odtwarzaczami Nomad.
+	RU	Музыку нельзя перемещать между двумя плеерами Nomad.
+	SV	Musik kan inte flyttas mellan två Nomad-spelare.
+	ZH_CN	无法在两个 Nomad 播放器之间移动音乐。
 
 PLUGIN_NOMADCOMPANION_BAD_MODE
+	CS	Režim musí být "replace" nebo "append".
+	DA	Tilstanden skal være "replace" eller "append".
+	DE	Der Modus muss "replace" oder "append" sein.
 	EN	The mode must be "replace" or "append".
+	ES	El modo debe ser "replace" o "append".
+	FI	Tilan on oltava "replace" tai "append".
+	FR	Le mode doit être "replace" ou "append".
+	HU	A mód csak "replace" vagy "append" lehet.
+	IT	La modalità deve essere "replace" o "append".
+	NL	De modus moet "replace" of "append" zijn.
+	NO	Modusen må være "replace" eller "append".
+	PL	Tryb musi mieć wartość "replace" lub "append".
+	RU	Режим должен быть "replace" или "append".
+	SV	Läget måste vara "replace" eller "append".
+	ZH_CN	模式必须为 "replace" 或 "append"。
 
 PLUGIN_NOMADCOMPANION_TEST_MODE
+	CS	Testovací režim
+	DA	Testtilstand
+	DE	Testmodus
 	EN	Test mode
+	ES	Modo de prueba
+	FI	Testitila
+	FR	Mode test
+	HU	Tesztmód
+	IT	Modalità di prova
+	NL	Testmodus
+	NO	Testmodus
+	PL	Tryb testowy
+	RU	Тестовый режим
+	SV	Testläge
+	ZH_CN	测试模式
 
 PLUGIN_NOMADCOMPANION_TEST_MODE_DESC
+	CS	Umožní ovládat přehrávače Nomad i z počítače, na kterém běží Lyrion, aby z něj bylo možné aplikaci testovat. Jinak ponechte vypnuté.
+	DA	Lader også computeren, der kører Lyrion, styre Nomad-afspillere, så appen kan testes derfra. Lad den ellers være slået fra.
+	DE	Lässt auch den Computer, auf dem Lyrion läuft, Nomad-Player steuern, um die App von dort zu testen. Sonst ausgeschaltet lassen.
 	EN	Lets the computer running Lyrion control Nomad players too, for testing the app from it. Leave this off otherwise.
+	ES	Permite que el ordenador donde se ejecuta Lyrion también controle los reproductores Nomad, para probar la aplicación desde él. Si no, déjelo desactivado.
+	FI	Sallii myös Lyrionia suorittavan tietokoneen ohjata Nomad-soittimia, jotta sovellusta voi testata siitä. Pidä muuten pois päältä.
+	FR	Permet aussi à l'ordinateur qui exécute Lyrion de contrôler les platines Nomad, pour tester l'application depuis celui-ci. Sinon, laissez-le désactivé.
+	HU	A Lyriont futtató számítógép is vezérelheti a Nomad lejátszókat, hogy onnan tesztelhető legyen az alkalmazás. Egyébként hagyja kikapcsolva.
+	IT	Consente anche al computer su cui è in esecuzione Lyrion di controllare i lettori Nomad, per provare l'app da lì. Altrimenti lasciala disattivata.
+	NL	Laat ook de computer waarop Lyrion draait Nomad-muziekspelers bedienen, om de app vanaf die computer te testen. Laat dit anders uit.
+	NO	Lar også datamaskinen som kjører Lyrion, styre Nomad-spillere, slik at appen kan testes derfra. La den ellers være av.
+	PL	Pozwala także komputerowi, na którym działa Lyrion, sterować odtwarzaczami Nomad, aby można było z niego testować aplikację. W przeciwnym razie pozostaw wyłączone.
+	RU	Позволяет также компьютеру, на котором работает Lyrion, управлять плеерами Nomad, чтобы тестировать приложение с него. В остальных случаях оставьте выключенным.
+	SV	Låter även datorn som kör Lyrion styra Nomad-spelare, så att appen kan testas därifrån. Låt det annars vara avstängt.
+	ZH_CN	允许运行 Lyrion 的电脑也控制 Nomad 播放器，以便从该电脑测试应用。其他情况下请保持关闭。
 
 PLUGIN_NOMADCOMPANION_SCROBBLING_TITLE
+	CS	Scrobbling
+	DA	Scrobbling
+	DE	Scrobbling
 	EN	Scrobbling
+	ES	Scrobbling
+	FI	Scrobblaus
+	FR	Scrobbling
+	HU	Scrobbling
+	IT	Scrobbling
+	NL	Scrobbelen
+	NO	Scrobbling
+	PL	Scrobbling
+	RU	Скробблинг
+	SV	Scrobbling
+	ZH_CN	Scrobbling
 
 PLUGIN_NOMADCOMPANION_SCROBBLING
+	CS	Lyrion přehrávače Nomad nescrobbluje, protože nevidí, co Nomad přehrává offline. Nomad místo toho scrobbluje na Last.fm sám: v telefonu otevřete v aplikaci Nomad "Settings" a klepněte na "Sign in to Last.fm". Skladby přehrané offline se odešlou, jakmile bude telefon opět online. Pokud Nomad scrobbluje i aplikace Last.fm, vypněte v ní Nomad, jinak se skladby započítají dvakrát.
+	DA	Lyrion scrobbler ikke Nomad-afspillere, fordi den ikke kan se, hvad Nomad afspiller offline. Nomad scrobbler i stedet selv til Last.fm: Åbn "Settings" i Nomad på telefonen, og tryk på "Sign in to Last.fm". Numre afspillet offline sendes, så snart telefonen er online igen. Hvis Last.fm-appen også scrobbler Nomad, så slå Nomad fra dér, ellers tæller afspilningerne dobbelt.
+	DE	Lyrion scrobbelt Nomad-Player nicht, weil es nicht sieht, was Nomad offline spielt. Nomad scrobbelt stattdessen selbst zu Last.fm: Öffnen Sie auf dem Telefon in Nomad "Settings" und tippen Sie auf "Sign in to Last.fm". Offline gespielte Titel werden gesendet, sobald das Telefon wieder online ist. Wenn auch die Last.fm-App Nomad scrobbelt, schalten Sie Nomad dort aus, sonst werden Titel doppelt gezählt.
 	EN	Lyrion doesn't scrobble Nomad players, because it can't see what Nomad plays while offline. Nomad scrobbles to Last.fm itself instead: on the phone, open Nomad's Settings and tap Sign in to Last.fm. Plays made offline are sent once the phone is back online. If the Last.fm app also scrobbles Nomad, turn Nomad off there, or plays will count twice.
+	ES	Lyrion no hace scrobbling de los reproductores Nomad, porque no puede ver lo que Nomad reproduce sin conexión. En su lugar, Nomad hace scrobbling en Last.fm por sí mismo: en el teléfono, abra "Settings" en Nomad y toque "Sign in to Last.fm". Lo reproducido sin conexión se envía cuando el teléfono vuelve a estar en línea. Si la aplicación de Last.fm también hace scrobbling de Nomad, desactive Nomad allí, o las reproducciones se contarán dos veces.
+	FI	Lyrion ei scrobblaa Nomad-soittimia, koska se ei näe, mitä Nomad soittaa offline-tilassa. Nomad scrobblaa sen sijaan itse Last.fm:ään: avaa puhelimessa Nomadin "Settings" ja napauta "Sign in to Last.fm". Offline-tilassa soitetut kappaleet lähetetään, kun puhelin on taas verkossa. Jos myös Last.fm-sovellus scrobblaa Nomadia, poista Nomad käytöstä siellä, muuten kuuntelukerrat lasketaan kahdesti.
+	FR	Lyrion ne scrobble pas les platines Nomad, car il ne voit pas ce que Nomad lit hors ligne. Nomad scrobble lui-même sur Last.fm : sur le téléphone, ouvrez "Settings" dans Nomad et touchez "Sign in to Last.fm". Les morceaux lus hors ligne sont envoyés dès que le téléphone est de nouveau en ligne. Si l'application Last.fm scrobble aussi Nomad, désactivez Nomad dans celle-ci, sinon les écoutes seront comptées deux fois.
+	HU	A Lyrion nem scrobble-oz a Nomad lejátszókról, mert nem látja, mit játszik a Nomad offline. Ehelyett a Nomad maga scrobble-oz a Last.fm-re: a telefonon nyissa meg a Nomadban a "Settings" menüt, és koppintson a "Sign in to Last.fm" gombra. Az offline lejátszott számokat a Nomad elküldi, amint a telefon újra online. Ha a Last.fm alkalmazás is scrobble-ozza a Nomadot, kapcsolja ki ott a Nomadot, különben a lejátszások kétszer számítanak.
+	IT	Lyrion non esegue lo scrobbling dei lettori Nomad, perché non vede cosa riproduce Nomad offline. Nomad invece esegue lo scrobbling su Last.fm da solo: sul telefono, apri "Settings" in Nomad e tocca "Sign in to Last.fm". I brani riprodotti offline vengono inviati appena il telefono torna online. Se anche l'app Last.fm esegue lo scrobbling di Nomad, disattiva Nomad lì, altrimenti gli ascolti verranno contati due volte.
+	NL	Lyrion scrobbelt Nomad-muziekspelers niet, omdat Lyrion niet kan zien wat Nomad offline afspeelt. Nomad scrobbelt in plaats daarvan zelf naar Last.fm: open op de telefoon in Nomad "Settings" en tik op "Sign in to Last.fm". Wat offline is afgespeeld, wordt verstuurd zodra de telefoon weer online is. Als de Last.fm-app Nomad ook scrobbelt, zet Nomad daar dan uit, anders tellen nummers dubbel.
+	NO	Lyrion scrobbler ikke Nomad-spillere, fordi den ikke ser hva Nomad spiller frakoblet. Nomad scrobbler i stedet selv til Last.fm: Åpne "Settings" i Nomad på telefonen, og trykk på "Sign in to Last.fm". Det som spilles frakoblet, sendes når telefonen er på nett igjen. Hvis Last.fm-appen også scrobbler Nomad, slår du av Nomad der, ellers telles avspillingene dobbelt.
+	PL	Lyrion nie scrobbluje odtwarzaczy Nomad, ponieważ nie widzi, co Nomad odtwarza offline. Zamiast tego Nomad sam scrobbluje do Last.fm: na telefonie otwórz w Nomad "Settings" i stuknij "Sign in to Last.fm". Utwory odtworzone offline zostaną wysłane, gdy telefon znów będzie online. Jeśli aplikacja Last.fm również scrobbluje Nomad, wyłącz w niej Nomad, w przeciwnym razie odtworzenia zostaną policzone dwukrotnie.
+	RU	Lyrion не скробблит плееры Nomad, потому что не видит, что Nomad воспроизводит офлайн. Вместо этого Nomad сам скробблит в Last.fm: на телефоне откройте в Nomad "Settings" и нажмите "Sign in to Last.fm". Треки, прослушанные офлайн, отправляются, как только телефон снова в сети. Если приложение Last.fm тоже скробблит Nomad, отключите там Nomad, иначе прослушивания будут засчитаны дважды.
+	SV	Lyrion scrobblar inte Nomad-spelare, eftersom den inte ser vad Nomad spelar offline. Nomad scrobblar i stället själv till Last.fm: öppna "Settings" i Nomad på telefonen och tryck på "Sign in to Last.fm". Det som spelas offline skickas när telefonen är online igen. Om Last.fm-appen också scrobblar Nomad, stäng av Nomad där, annars räknas spelningarna dubbelt.
+	ZH_CN	Lyrion 不会为 Nomad 播放器 scrobble，因为它看不到 Nomad 离线时播放的内容。Nomad 会自己向 Last.fm scrobble：在手机上打开 Nomad 的 "Settings"，然后点按 "Sign in to Last.fm"。离线播放的记录会在手机重新联网后发送。如果 Last.fm 应用也在为 Nomad scrobble，请在其中关闭 Nomad，否则播放会被计算两次。

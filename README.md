@@ -65,6 +65,10 @@ The plugin keeps Lyrion's scrobbling account for Nomad players set to none, howe
 
 **Settings → Advanced → Nomad Companion** has a test mode, off by default. While it's on, the computer running Lyrion can control Nomad players too, so the app can be tested from it.
 
+## Translations
+
+The plugin's text is in English and Lyrion's main languages: Czech, Danish, Dutch, Finnish, French, German, Hungarian, Italian, Norwegian, Polish, Russian, Spanish, Swedish and Simplified Chinese. The app's own buttons, such as "Sign in to Last.fm", are quoted in English, as the app is in English. The translations haven't been checked by native speakers yet; corrections are welcome. `t/strings.t` checks that every string has every language.
+
 ## Layout
 
 - `NomadCompanion/`: the plugin itself, installed as `Plugins/NomadCompanion` in Lyrion's plugin folder
