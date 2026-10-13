@@ -1,9 +1,9 @@
 package Plugins::NomadCompanion::Scrobbling;
 
 # Keeps Lyrion's own scrobbling to Last.fm or ListenBrainz off for Nomad
-# players, and points to the phone instead. Lyrion can't see what Nomad plays
-# while offline, but the phone can, and the Last.fm app there keeps those
-# scrobbles until the phone is back online.
+# players, and points to Nomad's own instead. Lyrion can't see what Nomad
+# plays while offline, but Nomad can, and keeps those scrobbles until the
+# phone is back online.
 #
 # Lyrion scrobbles a player only if it has a scrobbling account chosen, and
 # every way of choosing one goes through

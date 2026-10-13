@@ -1,6 +1,6 @@
 # Nomad Companion for Lyrion
 
-A Lyrion plugin for Nomad Player, the Android app: only the phone running Nomad can control its player. Lyrion's web interface and other controllers can still see what Nomad is playing.
+A Lyrion plugin for Nomad LMS Player, the Android app: only the phone running Nomad can control its player. Lyrion's web interface and other controllers can still see what Nomad is playing.
 
 ## Installation
 
@@ -57,7 +57,7 @@ The last three move music without syncing the players, and only Nomad's phone ca
 
 ## Scrobbling
 
-Lyrion doesn't scrobble Nomad players, to Last.fm or ListenBrainz, because it can't see what Nomad plays while offline. Scrobble from the phone instead: install the Last.fm app, sign in, and let it scrobble other apps, including Nomad. It asks for notification access to see what's playing, and keeps scrobbles made offline until the phone is back online.
+Lyrion doesn't scrobble Nomad players, to Last.fm or ListenBrainz, because it can't see what Nomad plays while offline. Nomad scrobbles to Last.fm itself instead: on the phone, open Nomad's Settings and tap Sign in to Last.fm. Plays made offline are sent once the phone is back online. If the Last.fm app also scrobbles Nomad, turn Nomad off there, or plays will count twice.
 
 The plugin keeps Lyrion's scrobbling account for Nomad players set to none, however it's chosen, and turns off any account chosen before the plugin was installed. Nomad's scrobbling settings page in Lyrion, and its Squeezebox controller menu, show this guidance instead of the choice of accounts.
 

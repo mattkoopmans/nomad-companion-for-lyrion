@@ -1,6 +1,6 @@
 package Plugins::NomadCompanion::Plugin;
 
-# Server side of Nomad Player: lets only the phone running Nomad control its
+# Server side of Nomad LMS Player: lets only the phone running Nomad control its
 # player. Plugins::NomadCompanion::Rules decides which requests count as
 # control; this module works out which device sent each request and refuses
 # the ones the rules don't allow.

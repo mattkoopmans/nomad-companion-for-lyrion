@@ -6,7 +6,7 @@
   <plugins>
     <plugin name="NomadCompanion" version="0.4.0" minTarget="9.1.1" maxTarget="*">
       <title lang="EN">Nomad Companion</title>
-      <desc lang="EN">Lets only the phone running Nomad Player control it. Other devices can still see what it's playing.</desc>
+      <desc lang="EN">Lets only the phone running Nomad LMS Player control it. Other devices can still see what it's playing.</desc>
       <category>tools</category>
       <url>https://github.com/mattkoopmans/nomad-companion-for-lyrion/releases/download/v0.4.0/NomadCompanion-0.4.0.zip</url>
       <sha>225e5e9b3916cf376402760838bf5a03899e4e3f</sha>

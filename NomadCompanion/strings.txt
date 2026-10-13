@@ -2,7 +2,7 @@ PLUGIN_NOMADCOMPANION
 	EN	Nomad Companion
 
 PLUGIN_NOMADCOMPANION_DESC
-	EN	Lets only the phone running Nomad Player control it. Other devices can still see what it's playing.
+	EN	Lets only the phone running Nomad LMS Player control it. Other devices can still see what it's playing.
 
 PLUGIN_NOMADCOMPANION_REFUSED
 	EN	Only the phone running Nomad can control this player.
@@ -32,4 +32,4 @@ PLUGIN_NOMADCOMPANION_SCROBBLING_TITLE
 	EN	Scrobbling
 
 PLUGIN_NOMADCOMPANION_SCROBBLING
-	EN	Lyrion doesn't scrobble Nomad players, because it can't see what Nomad plays while offline. Scrobble from the phone instead: install the Last.fm app, sign in, and let it scrobble other apps, including Nomad. It asks for notification access to see what's playing, and keeps scrobbles made offline until the phone is back online.
+	EN	Lyrion doesn't scrobble Nomad players, because it can't see what Nomad plays while offline. Nomad scrobbles to Last.fm itself instead: on the phone, open Nomad's Settings and tap Sign in to Last.fm. Plays made offline are sent once the phone is back online. If the Last.fm app also scrobbles Nomad, turn Nomad off there, or plays will count twice.
